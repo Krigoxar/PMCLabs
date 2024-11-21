@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbkg_rotated">
+
+    <view
+        android:id="@+id/LStick"
+        class="io.github.controlwear.virtual.joystick.android.JoystickView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/DPad"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <view
+        android:id="@+id/DPad"
+        class="io.github.controlwear.virtual.joystick.android.JoystickView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:translationZ="0dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <view
+        android:id="@+id/RStick"
+        class="io.github.controlwear.virtual.joystick.android.JoystickView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonY"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="60dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/xboxcontrollerbuttony"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonA"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonB" />
+
+    <ImageButton
+        android:id="@+id/imageButtonA"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/xboxcontrollerbuttona"
+        app:layout_constraintBottom_toTopOf="@+id/RStick"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonB" />
+
+    <ImageButton
+        android:id="@+id/imageButtonB"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/xboxcontrollerbuttonb"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonA"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonX"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="60dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/xboxcontrollerbuttonx"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonA"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonB" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:src="@drawable/xboxcontrollerdpad"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/SettingsButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:src="@drawable/baseline_settings_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
